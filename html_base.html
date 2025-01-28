@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduzione a HTML</title>
+</head>
+
+<body>
+    <header>
+        <h1>Benvenuti nell'introduzione a HTML, se non hai capito GitHub <a href="github.html">clicca qui</a></h1>
+    </header>
+    <main>
+        <section>
+            <h2>Cos'è HTML?</h2>
+            <p>HTML (HyperText Markup Language) è il linguaggio standard per creare pagine web. <br>Utilizza una serie di
+                elementi e tag per strutturare il contenuto di una pagina.</p>
+        </section>
+        <section>
+            <h2>Struttura di base di un documento HTML</h2>
+            <pre>
+                <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Titolo della pagina che vedi sulla scheda&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+            Questa è l'intestazione della pagina.
+        &lt;/header&gt;
+        &lt;main&gt;
+            Questo è il contenuto principale della pagina.
+        &lt;/main&gt;
+        &lt;footer&gt;
+            Questo è il piè di pagina della pagina.
+        &lt;/footer&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+                </code>
+            </pre>
+        </section>
+        <section>
+            <h2>Elementi principali</h2>
+            <ul>
+                <li>&lt;h1&gt; - &lt;h6&gt;: Intestazioni</li>
+                <li>&lt;p&gt;: Paragrafi</li>
+                <li>&lt;a&gt;: Link</li>
+                <li>&lt;img&gt;: Immagini</li>
+                <li>&lt;ul&gt; e &lt;ol&gt;: Liste non ordinate e ordinate</li>
+                <li>&lt;div&gt; e &lt;span&gt;: Contenitori generici</li>
+                <li>&lt;table&gt;: Tabelle</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Intestazioni</h2>
+            <p>Le intestazioni vanno da <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> e rappresentano titoli di
+                diversa importanza.</p>
+            <h1>Intestazione 1</h1>
+            <h2>Intestazione 2</h2>
+            <h3>Intestazione 3</h3>
+            <h4>Intestazione 4</h4>
+            <h5>Intestazione 5</h5>
+            <h6>Intestazione 6</h6>
+        </section>
+        <section>
+            <h2>Paragrafi e Span</h2>
+            <p>Il tag <code>&lt;p&gt;</code> viene utilizzato per creare paragrafi.</p>
+            <p>Questo è un esempio di paragrafo.</p>
+            <p>Il tag <code>&lt;span&gt;</code> viene utilizzato per applicare stili a parti di testo all'interno di un
+                paragrafo.</p>
+            <p>Questo è un esempio di <span style="color: red;">span</span> all'interno di un paragrafo.</p>
+        </section>
+        <section>
+            <h2>Liste</h2>
+            <p>Le liste possono essere non ordinate (<code>&lt;ul&gt;</code>) o ordinate (<code>&lt;ol&gt;</code>).</p>
+            <ul>
+                <li>Elemento della lista non ordinata 1</li>
+                <li>Elemento della lista non ordinata 2</li>
+            </ul>
+            <ol>
+                <li>Elemento della lista ordinata 1</li>
+                <li>Elemento della lista ordinata 2</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Div</h2>
+            <p>Il tag <code>&lt;div&gt;</code> viene utilizzato come contenitore generico per raggruppare altri
+                elementi.</p>
+            <div style="border: 1px solid black; padding: 10px;">
+                Questo è un esempio di <code>&lt;div&gt;</code>.
+            </div>
+        </section>
+        <section>
+            <h2>Section vs Div</h2>
+            <p>Il tag <code>&lt;section&gt;</code> viene utilizzato per raggruppare contenuti tematicamente correlati,
+                mentre il tag <code>&lt;div&gt;</code> è un contenitore generico senza significato semantico.</p>
+            <section style="border: 1px solid blue; padding: 10px;">
+                Questo è un esempio di <code>&lt;section&gt;</code> che raggruppa contenuti correlati.
+            </section>
+            <div style="border: 1px solid green; padding: 10px;">
+                Questo è un esempio di <code>&lt;div&gt;</code> che raggruppa elementi senza significato semantico.
+            </div>
+        </section>
+        <section>
+            <h2>Tabelle</h2>
+            <p>Le tabelle vengono create utilizzando il tag <code>&lt;table&gt;</code>.</p>
+            <table style="border: 1px solid black; border-collapse: collapse;">
+                <caption>Tabella di esempio</caption>
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid black;">Intestazione 1</th>
+                        <th style="border: 1px solid black;">Intestazione 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid black;">Dati 1</td>
+                        <td style="border: 1px solid black;">Dati 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Immagini</h2>
+            <p>Le immagini vengono inserite utilizzando il tag <code>&lt;img&gt;</code>.</p>
+            <img src="esempio.jpg" alt="Esempio di immagine">
+        </section>
+        <section>
+            <h2>Link ad altre pagine</h2>
+            <p>I link vengono creati utilizzando il tag <code>&lt;a&gt;</code>.</p>
+            <a href="https://www.example.com">Questo è un esempio di link</a>
+        </section>
+        <section>
+            <h2>Footer</h2>
+            <p>Il tag <code>&lt;footer&gt;</code> viene utilizzato per definire il piè di pagina di un documento o di
+                una sezione. Solitamente contiene informazioni sull'autore, copyright, link a termini di servizio, ecc.
+            </p>
+            <footer style="border: 1px solid gray; padding: 10px;">
+                <p>cose aziendali varie</p>
+            </footer>
+        </section>
+    </main>
+</body>
+
+</html>

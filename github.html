@@ -1,0 +1,42 @@
+<!-- ...existing code... -->
+
+<h2>Come usare GitHub</h2>
+<section>
+    GitHub è una piattaforma di hosting per il controllo di versione e la collaborazione. <br>
+    Permette di lavorare insieme su progetti da qualsiasi luogo. <br>
+    Ecco i passaggi fondamentali per iniziare:
+</section>
+<ol>
+    <li><strong>Creare un account:</strong> Vai su <a href="https://github.com">github.com</a> e registrati per un nuovo
+        account.</li>
+    <li><strong>Creare un nuovo repository:</strong> Dopo aver effettuato l'accesso, clicca sul pulsante "New" per
+        creare un nuovo repository. Dai un nome al tuo repository e scegli se renderlo pubblico o privato.</li>
+    <li><strong>Configurare il repository locale:</strong>
+        <ol>
+            <li><strong>Se hai già del codice locale e/o non è presente su GitHub:</strong>
+                <ol>
+                    <li>Inizializza il repository locale con <code>git init</code>.</li>
+                    <li>Aggiungi l'origine remota con <code>git remote add origin [URL del repository]</code>.</li>
+                    <li>Pushare i cambiamenti iniziali con <code>git push origin master</code>.</li>
+                </ol>
+            </li>
+            <li><strong>Se non hai codice locale ma è presente su GitHub:</strong>
+                <ol>
+                    <li>Clona il repository con <code>git clone [URL del repository]</code>.</li>
+                    <li>Oppure, se il repository esiste già in locale, aggiorna con <code>git pull origin master</code>.
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </li>
+    <li><strong>Aggiungere e committare cambiamenti:</strong> Usa <code>git add .</code> per aggiungere i file da committare
+        modificati e <code>git commit -m "..."</code> per salvare i cambiamenti con un messaggio descrittivo.</li>
+    <li><strong>Pushare i cambiamenti:</strong> Usa <code>git push origin master</code> per inviare i tuoi cambiamenti
+        al repository remoto su GitHub.</li>
+    <li><strong>Collaborare:</strong> Puoi collaborare con altri utenti creando pull request, che permettono di
+        discutere e rivedere i cambiamenti prima di unirli al branch principale.</li>
+</ol>
+
+<p>Per ulteriori dettagli, consulta la <a href="https://docs.github.com">documentazione ufficiale di GitHub</a>.</p>
+
+<p>Passa all'introduzione all'HTML: <a href="html_base.html">Introduzione all'HTML</a></p>
