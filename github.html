@@ -15,28 +15,47 @@
         <ol>
             <li><strong>Se hai già del codice locale e/o non è presente su GitHub:</strong>
                 <ol>
-                    <li>Inizializza il repository locale con <code>git init</code>.</li>
-                    <li>Aggiungi l'origine remota con <code>git remote add origin [URL del repository]</code>.</li>
-                    <li>Pushare i cambiamenti iniziali con <code>git push origin master</code>.</li>
+                    <li>Inizializza il repository locale con <code onclick="copyToClipboard('git init')">git init</code>.</li>
+                    <li>Aggiungi l'origine remota con <code onclick="copyToClipboard('git remote add origin [URL del repository]')">git remote add origin [URL del repository]</code>.</li>
+                    <li>Pushare i cambiamenti iniziali con <code onclick="copyToClipboard('git push origin master')">git push origin master</code>.</li>
                 </ol>
             </li>
             <li><strong>Se non hai codice locale ma è presente su GitHub:</strong>
                 <ol>
-                    <li>Clona il repository con <code>git clone [URL del repository]</code>.</li>
-                    <li>Oppure, se il repository esiste già in locale, aggiorna con <code>git pull origin master</code>.
-                    </li>
+                    <li>Clona il repository con <code onclick="copyToClipboard('git clone [URL del repository]')">git clone [URL del repository]</code>.</li>
+                    <li>Oppure, se il repository esiste già in locale, aggiorna con <code onclick="copyToClipboard('git pull')">git pull</code>.</li>
                 </ol>
             </li>
         </ol>
     </li>
-    <li><strong>Aggiungere e committare cambiamenti:</strong> Usa <code>git add .</code> per aggiungere i file da committare
-        modificati e <code>git commit -m "..."</code> per salvare i cambiamenti con un messaggio descrittivo.</li>
-    <li><strong>Pushare i cambiamenti:</strong> Usa <code>git push origin master</code> per inviare i tuoi cambiamenti
+    <li><strong>Aggiungere e committare cambiamenti:</strong> Usa <code onclick="copyToClipboard('git add .')">git add .</code> per aggiungere i file da committare
+        modificati e <code onclick="copyToClipboard('git commit -m &quot;...&quot;')">git commit -m "..."</code> per salvare i cambiamenti con un messaggio descrittivo.</li>
+    <li><strong>Pushare i cambiamenti:</strong> Usa <code onclick="copyToClipboard('git push origin master')">git push origin master</code> per inviare i tuoi cambiamenti
         al repository remoto su GitHub.</li>
     <li><strong>Collaborare:</strong> Puoi collaborare con altri utenti creando pull request, che permettono di
         discutere e rivedere i cambiamenti prima di unirli al branch principale.</li>
+    <li><strong>Gestire i branch:</strong> I branch ti permettono di lavorare su diverse versioni del tuo progetto contemporaneamente.
+        <ol>
+            <li><strong>Creare un nuovo branch senza spostarti nel nuovo branch:</strong> Usa <code onclick="copyToClipboard('git branch [nome-branch]')">git branch [nome-branch]</code> per creare un nuovo branch senza spostarti su di esso.</li>
+            <li><strong>Creare un nuovo branch:</strong> Usa <code onclick="copyToClipboard('git checkout -b [nome-branch]')">git checkout -b [nome-branch]</code> per creare e spostarti su un nuovo branch.</li>
+            <li><strong>Visualizzare i branch esistenti:</strong> Usa <code onclick="copyToClipboard('git branch')">git branch</code> per vedere tutti i branch disponibili.</li>
+            <li><strong>Unire un branch:</strong> Usa <code onclick="copyToClipboard('git merge [nome-branch]')">git merge [nome-branch]</code> per unire un branch al branch corrente.</li>
+            <li><strong>Eliminare un branch:</strong> Usa <code onclick="copyToClipboard('git branch -d [nome-branch]')">git branch -d [nome-branch]</code> per eliminare un branch che non ti serve più.</li>
+        </ol>
+    </li>
 </ol>
 
 <p>Per ulteriori dettagli, consulta la <a href="https://docs.github.com">documentazione ufficiale di GitHub</a>.</p>
 
 <p>Passa all'introduzione all'HTML: <a href="html_base.html">Introduzione all'HTML</a></p>
+
+<script>
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        alert('Copiato negli appunti: ' + text);
+    }, function(err) {
+        console.error('Errore nella copia: ', err);
+    });
+}
+</script>
+<!-- ...existing code... -->
