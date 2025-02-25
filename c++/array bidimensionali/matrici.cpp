@@ -7,7 +7,9 @@ int main()
     int scaffale, posizione;
     string libro;
     string libreria[num_righe][num_colonne]; // Use constants from header file
-    inizializzaLibreria(libreria);
+    inizializzaLibreria(libreria); //deve essere fatto una volta sola
+    cout<<"\nlibreria inizializzata";
+    stampaLibreria(libreria);
     cout<<"\n Inserisci nome libro: ";
     cin>>libro;
     cout<<"\n Dimmi in che scaffale metterlo: ";

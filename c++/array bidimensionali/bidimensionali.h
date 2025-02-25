@@ -2,6 +2,12 @@
 using namespace std;
 const int  num_colonne=5;//colonne
 const int  num_righe=6; //righe
+
+/**
+ * @brief Initializes a 2D array of strings by setting all elements to an empty string.
+ * 
+ * @param libreria A 2D array of strings with dimensions [num_righe][num_colonne].
+ */
 void inizializzaLibreria(string libreria[num_righe][num_colonne])
 {
     for (int i = 0; i < num_righe; i++)
@@ -11,6 +17,7 @@ void inizializzaLibreria(string libreria[num_righe][num_colonne])
             libreria[i][j]="";
         }
     }
+    return;
 }
 
 /**
@@ -49,23 +56,12 @@ void aggiungiLibro(string libreria[num_righe][num_colonne], int numScaffale,int 
     return;
 }
 
+void stampaLibreria(string libreria[num_righe][num_colonne])
+{
+    
+}
+
 void rimuoviLibro(string libreria[num_righe][num_colonne], int numScaffale,int numPosizione)
 {
-    while ((numScaffale < 0 || numScaffale >= num_righe) || (numPosizione < 0 || numPosizione >= num_colonne))
-    {
-        cout << "\n Valori sbagliati, inserisci num scaffale: ";
-        cin >> numScaffale;
-        cout << "\n Valori sbagliati, inserisci numPosizione: ";
-        cin >> numPosizione;
-    }
-    if (libreria[numScaffale][numPosizione] == "")
-    {
-        cout << "\n In questa posizione non c'e' nessun libro.";
-    }
-    else
-    {
-        libreria[numScaffale][numPosizione] = "";
-        cout << "\n Libro rimosso.";
-    }
-    return;
+    
 }
