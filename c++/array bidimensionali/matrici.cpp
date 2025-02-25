@@ -4,10 +4,9 @@ using namespace std;
 
 int main() 
 {
-    int numScaffali,numPosizione;
-    int scaffale,posizione;
+    int scaffale, posizione;
     string libro;
-    string libreria[numScaffali][numPosizione];
+    string libreria[num_righe][num_colonne]; // Use constants from header file
     inizializzaLibreria(libreria);
     cout<<"\n Inserisci nome libro: ";
     cin>>libro;

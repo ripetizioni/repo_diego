@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
-int const num_colonne=5;//colonne
-int const num_righe=6; //righe
+const int  num_colonne=5;//colonne
+const int  num_righe=6; //righe
 void inizializzaLibreria(string libreria[num_righe][num_colonne])
 {
     for (int i = 0; i < num_righe; i++)
@@ -37,8 +37,6 @@ void aggiungiLibro(string libreria[num_righe][num_colonne], int numScaffale,int 
         cout<<"\n Valori sbagliati, inserisci numPosizione: ";
         cin>>numPosizione;
     }
-    numScaffale--;
-    numPosizione--;
     if (libreria[numScaffale][numPosizione]!= "")
     {
         cout<<"\n In questa posizione c'e' gia' un libro: "<<libreria[numScaffale][numPosizione];
@@ -53,5 +51,21 @@ void aggiungiLibro(string libreria[num_righe][num_colonne], int numScaffale,int 
 
 void rimuoviLibro(string libreria[num_righe][num_colonne], int numScaffale,int numPosizione)
 {
-
+    while ((numScaffale < 0 || numScaffale >= num_righe) || (numPosizione < 0 || numPosizione >= num_colonne))
+    {
+        cout << "\n Valori sbagliati, inserisci num scaffale: ";
+        cin >> numScaffale;
+        cout << "\n Valori sbagliati, inserisci numPosizione: ";
+        cin >> numPosizione;
+    }
+    if (libreria[numScaffale][numPosizione] == "")
+    {
+        cout << "\n In questa posizione non c'e' nessun libro.";
+    }
+    else
+    {
+        libreria[numScaffale][numPosizione] = "";
+        cout << "\n Libro rimosso.";
+    }
+    return;
 }
