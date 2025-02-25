@@ -15,7 +15,7 @@ Suggerimenti:
 
 Descrizione delle funzioni:
 
-1. void inizializzaLibreria(string libreria[][NUM_COLONNE], int numScaffali, int numPosizioni):
+1. void inizializzaLibreria(string libreria[][NUM_COLONNE]):
    - Inizializza la matrice della libreria con il numero specificato di scaffali e posizioni per scaffale.
    - Imposta tutte le posizioni inizialmente come vuote.
 

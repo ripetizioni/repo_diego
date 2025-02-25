@@ -1,16 +1,25 @@
 #include <iostream>
-#include "libreria.h"
+#include "bidimensionali.h"
 using namespace std;
 
 int main() 
 {
-    int numScaffali;
-    int numPosizioni;
-    string libreria[numScaffali][numPosizioni];
+    int numScaffali,numPosizione;
+    int scaffale,posizione;
+    string libro;
+    string libreria[numScaffali][numPosizione];
+    inizializzaLibreria(libreria);
+    cout<<"\n Inserisci nome libro: ";
+    cin>>libro;
+    cout<<"\n Dimmi in che scaffale metterlo: ";
+    cin>>scaffale;
+    cout<<"\n Dimmi in che posizione metterlo: ";
+    cin>>posizione;
+    aggiungiLibro(libreria, scaffale, posizione, libro);
     
-    
+    /*
     // Dichiarazione di un array bidimensionale 3x3
-    /*int riga=3;
+    int riga=3;
     int colonna=7;
     int matrice[riga][colonna]= {
         {1,  2,  3,  4,  5,  6,  7},
@@ -32,7 +41,7 @@ int main()
                 cout<<"\nil numero e' presente";
             }
         }
-    }*/
+    }
 
     // Somma degli elementi della matrice
     int somma = 0;
@@ -42,6 +51,6 @@ int main()
         }
     }
     cout << "Somma degli elementi della matrice: " << somma << endl;
-
+    */
     return 0;
 }

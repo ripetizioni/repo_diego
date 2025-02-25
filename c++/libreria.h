@@ -115,14 +115,3 @@ void insertionSort(float arr[], int n)
         arr[j + 1] = key;
     }
 }
-
-void inizializzaLibreria(string libreria[][5], int numScaffali, int numPosizioni)
-{
-    for (int i = 0; i < numScaffali; i++)
-    {
-        for (int j = 0 ; j < numPosizioni; j++)
-        {
-            cout<< libreria[i][j];
-        }
-    }
-}
