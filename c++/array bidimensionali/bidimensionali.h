@@ -1,7 +1,19 @@
+#ifndef BIDIMENSIONALI_H
+#define BIDIMENSIONALI_H
 #include <iostream>
+#include <string>
+
 using namespace std;
+
 const int num_colonne = 5; // colonne
 const int num_righe = 6;   // righe
+
+void inizializzaLibreria(string libreria[num_righe][num_colonne]);
+void aggiungiLibro(string libreria[num_righe][num_colonne], int numScaffale, int numPosizione, string libro);
+void rimuoviLibro(string libreria[num_righe][num_colonne], int numScaffale, int numPosizione);
+void stampaLibreria(string libreria[num_righe][num_colonne]);
+
+#endif // BIDIMENSIONALI_H
 
 /**
  * @brief Initializes a 2D array of strings by setting all elements to an empty string.
@@ -17,7 +29,6 @@ void inizializzaLibreria(string libreria[num_righe][num_colonne])
             libreria[i][j] = " ";
         }
     }
-    return;
 }
 
 /**
@@ -53,7 +64,6 @@ void aggiungiLibro(string libreria[num_righe][num_colonne], int numScaffale, int
         libreria[numScaffale][numPosizione] = libro;
         cout << "\n Libro aggiunto " << libreria[numScaffale][numPosizione];
     }
-    return;
 }
 
 void stampaLibreria(string libreria[num_righe][num_colonne])
@@ -65,7 +75,6 @@ void stampaLibreria(string libreria[num_righe][num_colonne])
             cout << libreria[i][j] << " ";
         }
     }
-    return;
 }
 
 void rimuoviLibro(string libreria[num_righe][num_colonne], int numScaffale, int numPosizione)
@@ -79,11 +88,11 @@ void rimuoviLibro(string libreria[num_righe][num_colonne], int numScaffale, int 
     }
     if (libreria[numScaffale][numPosizione] == " ")
     {
-        cout << "\n In questa posizione non c'è nessun libro " << libreria[numScaffale][numPosizione];
+        cout << "\n In questa posizione non c'è nessun libro ";
     }
     else
     {
-        cout << "\n Libro rimosso " << libreria[numScaffale][numPosizione];
+        libreria[numScaffale][numPosizione] = " ";
+        cout << "\n Libro rimosso ";
     }
-    return;
 }

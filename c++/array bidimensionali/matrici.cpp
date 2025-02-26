@@ -17,6 +17,13 @@ int main()
     cout<<"\n Dimmi in che posizione metterlo: ";
     cin>>posizione;
     aggiungiLibro(libreria, scaffale, posizione, libro);
+    stampaLibreria(libreria);
+    cout<<"\n Dimmi da che scaffale togliere il libro: ";
+    cin>>scaffale;
+    cout<<"\n Dimmi da che posizione togliere il libro: ";
+    cin>>posizione;
+    rimuoviLibro(libreria, scaffale, posizione);
+    stampaLibreria(libreria);
 
     
     /*
