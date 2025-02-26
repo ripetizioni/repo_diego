@@ -39,12 +39,12 @@ void aggiungiLibro(string libreria[num_righe][num_colonne], int numScaffale, int
 {
     while ((numScaffale < 0 || numScaffale >= num_righe) || (numPosizione < 0 || numPosizione >= num_colonne))
     {
-        cout << "\n Valori sbagliati, inserisci num scaffale: ";
+        cout << "\n Valori sbagliati, inserisci numScaffale: ";
         cin >> numScaffale;
         cout << "\n Valori sbagliati, inserisci numPosizione: ";
         cin >> numPosizione;
     }
-    if (libreria[numScaffale][numPosizione] != "")
+    if (libreria[numScaffale][numPosizione] != " ")
     {
         cout << "\n In questa posizione c'e' gia' un libro: " << libreria[numScaffale][numPosizione];
     }
@@ -68,23 +68,22 @@ void stampaLibreria(string libreria[num_righe][num_colonne])
     return;
 }
 
-void rimuoviLibro(string libreria[num_righe][num_colonne], int numScaffale, int numPosizione, string libro)
+void rimuoviLibro(string libreria[num_righe][num_colonne], int numScaffale, int numPosizione)
 {
     while ((numScaffale < 0 || numScaffale >= num_righe) || (numPosizione < 0 || numPosizione >= num_colonne))
     {
-        cout << "\n Valori sbagliati, inserisci num scaffale: ";
+        cout << "\n Valori sbagliati, inserisci numScaffale: ";
         cin >> numScaffale;
         cout << "\n Valori sbagliati, inserisci numPosizione: ";
         cin >> numPosizione;
     }
-    if (libreria[numScaffale][numPosizione] != libro)
+    if (libreria[numScaffale][numPosizione] == " ")
     {
-        cout << "\n In questa posizione non c'è nessun libro: " << libreria[numScaffale][numPosizione];
+        cout << "\n In questa posizione non c'è nessun libro " << libreria[numScaffale][numPosizione];
     }
     else
     {
-        libreria[numScaffale][numPosizione] = libro;
-        cout << "\n Libro rimosso" << libreria[numScaffale][numPosizione];
+        cout << "\n Libro rimosso " << libreria[numScaffale][numPosizione];
     }
     return;
 }

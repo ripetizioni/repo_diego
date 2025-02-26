@@ -17,6 +17,7 @@ int main()
     cout<<"\n Dimmi in che posizione metterlo: ";
     cin>>posizione;
     aggiungiLibro(libreria, scaffale, posizione, libro);
+
     
     /*
     // Dichiarazione di un array bidimensionale 3x3
