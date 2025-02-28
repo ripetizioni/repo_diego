@@ -53,6 +53,14 @@ for (int i = 0; i < 3; i++) {
     cout << endl;
 }
 ```
+## Compilare il progetto e farlo partire
+
+```
+    g++ -o matrici matrici.cpp
+```
+```
+    ./matrici
+```
 
 ## Esempio Completo
 
