@@ -39,7 +39,7 @@ struct Studente {
     int classe;
 };
 
-void stampaStudente(const Studente& s) {
+void stampaStudente(const Studente s) {
     cout << "Nome: " << s.nome << ", Cognome: " << s.cognome << ", Classe: " << s.classe << endl;
 }
 

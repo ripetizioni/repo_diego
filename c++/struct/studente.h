@@ -3,18 +3,29 @@
 
 using namespace std;
 
-struct Studente {
+struct Studente
+{
     string nome;
     string cognome;
     int classe;
 };
 
-void stampaStudente(const Studente& s) {
-    cout << "Nome: " << s.nome << ", Cognome: " << s.cognome << ", Classe: " << s.classe << endl;
+void stampaStudente(struct Studente A)
+{
+    cout<<"\n"<<A.nome<<"\n"<<A.cognome<<"\n"<<A.classe;
+    return;
 }
 
-void stampaTuttiStudenti(const Studente studenti[], int dimensione) {
-    for (int i = 0; i < dimensione; ++i) {
-        stampaStudente(studenti[i]);
+void stampaClasse(struct Studente classe[], int dimensione)
+{
+    for (int i = 0; i < dimensione; i++)
+    {
+        cout<<"\n";
+        stampaStudente(classe[i]);
     }
+    return;
 }
+
+
+
+
