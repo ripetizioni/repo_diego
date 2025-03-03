@@ -9,6 +9,10 @@ Esercizio: Definizione e utilizzo delle struct in C++
 
 3. Scrivi una funzione che accetta un array di `Studente` e la sua dimensione, e stampa le informazioni di tutti gli studenti.
 
-4. Nel file `studente.cpp`, crea degli esempi che dimostrano l'uso della struct e delle funzioni definite.
+4. Scrivi una funzione che accetta un array di `Studente` e la sua dimensione, e restituisce lo studente con la media più alta.
+
+5. Scrivi una funzione che accetta un array di `Studente` e la sua dimensione, e restituisce il numero di studenti in una determinata classe.
+
+6. Nel file `main.cpp`, crea degli esempi che dimostrano l'uso della struct e delle funzioni definite.
 
 Nota: Utilizza `using namespace std` per evitare di dover scrivere `std::` prima di ogni tipo della libreria standard.
