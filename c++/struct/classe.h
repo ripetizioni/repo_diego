@@ -45,7 +45,7 @@ struct Studente miglioreStudente(struct Studente A[], int dimensione)
 {
     // Inizializza il miglior studente come il primo della lista
     struct Studente migliore=A[0];
-    
+
     // Itera attraverso tutti gli studenti
     for(int i=1; i<dimensione;i++)
     {
@@ -56,7 +56,6 @@ struct Studente miglioreStudente(struct Studente A[], int dimensione)
             migliore=A[i];
         }
     }
-    
     // Ritorna il miglior studente
     return migliore;
 }
@@ -72,12 +71,17 @@ struct Studente miglioreStudente(struct Studente A[], int dimensione)
  */
 float mediaClasse(struct Classe prima)
 {
+    // Inizializza la variabile media a 0
     float media=0;
+    // Ciclo per ogni studente nella classe
     for (int i = 0; i < prima.n_studenti; i++)
     {
+        // Aggiunge la media dello studente corrente alla variabile media
         media+=calcolaMedia(prima.studenti[i]);
     }
+    // Calcola la media totale dividendo la somma delle medie per il numero di studenti
     media=media/prima.n_studenti;
+    // Ritorna la media calcolata
     return media;
 }
 
@@ -91,17 +95,27 @@ float mediaClasse(struct Classe prima)
  * @param dimensione Il numero di elementi nell'array `scuola`.
  * @return Una `string` che rappresenta il nome della classe con la media più alta.
  */
-string classeMigliore(struct Classe scuola[],int dimensione)
+string classeMigliore(struct Classe scuola[], int dimensione)
 {
+    // Inizializza il nome della classe migliore
     string migliore;
-    int best=0;
+    // Inizializza l'indice della classe con la media più alta
+    int best = 0;
+    
+    // Itera attraverso tutte le classi
     for (int i = 0; i < dimensione; i++)
     {
-        if (mediaClasse(scuola[i])>mediaClasse(scuola[best]))
+        // Se la media della classe corrente è maggiore della media della classe migliore
+        if (mediaClasse(scuola[i]) > mediaClasse(scuola[best]))
         {
-            best=i;
+            // Aggiorna l'indice della classe migliore
+            best = i;
         }
     }
-    migliore=scuola[best].nome_classe;
+    
+    // Assegna il nome della classe con la media più alta
+    migliore = scuola[best].nome_classe;
+    
+    // Ritorna il nome della classe migliore
     return migliore;
 }

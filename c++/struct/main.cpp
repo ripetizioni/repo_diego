@@ -1,5 +1,4 @@
 #include <iostream>
-#include "studente.h"
 #include "classe.h"
 using namespace std;
 
@@ -29,6 +28,7 @@ int main() {
                 cin>>scuola[n_classi].nome_classe;
                 n_classi++;
                 cout<<"\nClasse aggiunta, sono presenti: "<<scuola[n_classi].n_studenti<<" studenti";
+                break;
             }
             case 'a':
             {
@@ -122,10 +122,12 @@ int main() {
                 cout<<"\nDi quale classe vuoi la media?";
                 cin>>n;
                 cout<<"\nLa media della classe è: "<< mediaClasse(scuola[n]);
+                break;
             }
             case 'b':
             {
                 cout<<"\nLa classe migliore e': "<<classeMigliore(scuola,n_classi);
+                break;
             }
             case 'q':
             {
