@@ -1,12 +1,11 @@
 #include <iostream>
 #include "studente.h"
+#include "classe.h"
 using namespace std;
 
 int main() {
     // Dichiarazione di un array di strutture Studente di dimensione 50
-    struct Studente classe[50];
-    // Variabile per tenere traccia della dimensione logica dell'array
-    int dimensioneLogica=0;
+    struct Classe classe1;
     // Variabile per memorizzare la scelta dell'utente
     char scelta;
     do
@@ -20,16 +19,14 @@ int main() {
             {
                 // Aggiunta di un nuovo studente
                 cout<<"\n Inserisci Nome: ";
-                cin>>classe[dimensioneLogica].nome;
+                cin>>classe1.studenti[classe1.n_studenti].nome;
                 cout<<"\n Inserisci Congnome: ";
-                cin>>classe[dimensioneLogica].cognome;
-                cout<<"\nInserisci classe: ";
-                cin>>classe[dimensioneLogica].classe;
+                cin>>classe1.studenti[classe1.n_studenti].cognome;
                 cout<<"\nAggiunto studente ";
                 // Stampa dei dettagli dello studente appena aggiunto
-                stampaStudente(classe[dimensioneLogica]);
+                stampaStudente(classe1.studenti[classe1.n_studenti]);
                 // Incremento della dimensione logica
-                dimensioneLogica++;
+                classe1.n_studenti++;
                 break;
             }
             case 'v':
@@ -38,28 +35,28 @@ int main() {
                 int studente;
                 float voto;
                 // Stampa della lista degli studenti
-                stampaClasse(classe,dimensioneLogica);
+                stampaClasse(classe1.studenti,classe1.n_studenti);
                 cout<<"\n A quale studente vuoi aggiugnere il voto: ";
                 cin>>studente;
                 cout<<"\nInserisci voto: ";
                 cin>>voto;
                 // Aggiunta del voto allo studente selezionato
-                classe[studente].voti[classe[studente].dimensioneLogica]=voto;
-                classe[studente].dimensioneLogica++;
+                classe1.studenti[studente].voti[classe1.studenti[studente].dimensioneLogica]=voto;
+                classe1.studenti[studente].dimensioneLogica++;
                 cout<<"\nVoto aggiunto ";
                 break;
             }
             case 's':
             {
                 // Stampa della lista completa degli studenti
-                stampaClasse(classe,dimensioneLogica);
+                stampaClasse(classe1.studenti,classe1.n_studenti);
                 break;
             }
             case 't':
             {
                 // Stampa dello studente con la media dei voti migliore
                 cout<<"\nLo studente con la media migliore è: ";
-                stampaStudente(miglioreStudente(classe,dimensioneLogica));
+                stampaStudente(miglioreStudente(classe1.studenti,classe1.n_studenti));
                 break;
             }
             case 'q':
