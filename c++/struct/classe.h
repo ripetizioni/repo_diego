@@ -7,7 +7,7 @@ using namespace std;
 struct Classe
 {
     string nome_classe;
-    int n_studenti;
+    int n_studenti=0;
     Studente studenti[50];
 };
 
