@@ -30,7 +30,6 @@ void stampaClasse(struct Studente classe[], int dimensione)
     return;
 }
 
-
 /**
  * @brief Trova lo studente con la media più alta in un array di studenti.
  *
@@ -59,5 +58,50 @@ struct Studente miglioreStudente(struct Studente A[], int dimensione)
     }
     
     // Ritorna il miglior studente
+    return migliore;
+}
+
+/**
+ * @brief Calcola la media delle medie degli studenti di una classe.
+ * 
+ * Questa funzione prende una struttura Classe come input e calcola la media
+ * delle medie degli studenti presenti nella classe.
+ * 
+ * @param prima La struttura Classe contenente gli studenti e il numero di studenti.
+ * @return float La media delle medie degli studenti della classe.
+ */
+float mediaClasse(struct Classe prima)
+{
+    float media=0;
+    for (int i = 0; i < prima.n_studenti; i++)
+    {
+        media+=calcolaMedia(prima.studenti[i]);
+    }
+    media=media/prima.n_studenti;
+    return media;
+}
+
+/**
+ * @brief Determina la classe migliore in base alla loro media.
+ * 
+ * Questa funzione itera attraverso un array di strutture `Classe`, confronta le loro medie,
+ * e restituisce il nome della classe con la media più alta.
+ * 
+ * @param scuola Un array di strutture `Classe` che rappresenta le classi della scuola.
+ * @param dimensione Il numero di elementi nell'array `scuola`.
+ * @return Una `string` che rappresenta il nome della classe con la media più alta.
+ */
+string classeMigliore(struct Classe scuola[],int dimensione)
+{
+    string migliore;
+    int best=0;
+    for (int i = 0; i < dimensione; i++)
+    {
+        if (mediaClasse(scuola[i])>mediaClasse(scuola[best]))
+        {
+            best=i;
+        }
+    }
+    migliore=scuola[best].nome_classe;
     return migliore;
 }

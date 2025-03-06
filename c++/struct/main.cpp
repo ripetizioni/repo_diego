@@ -73,6 +73,5 @@ int main() {
             }
         }
     }while (scelta!='q'); // Ripeti il ciclo finché l'utente non sceglie di uscire ('q')
-    
     return 0;
 }
