@@ -1,0 +1,16 @@
+[submodule "web"]
+	path = web
+	url = https://github.com/ripetizioni/web.git
+	branch = master
+[submodule "assembly"]
+	path = assembly
+	url = https://github.com/ripetizioni/assembly.git
+	branch = master
+[submodule "C-"]
+	path = C-
+	url = https://github.com/ripetizioni/C-.git
+	branch = master
+[submodule "lezioni_java"]
+	path = lezioni_java
+	url = https://github.com/ripetizioni/lezioni_java.git
+	branch = master
